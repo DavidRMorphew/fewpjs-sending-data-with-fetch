@@ -22,6 +22,10 @@ function submitData(name, email) {
         .then(function(json) {
             const currentText = body.innerHTML
             body.innerHTML = currentText + "<br>" + json.id;
+            // Alternative, which the test did not like:
+            // const li = document.createElement('li');
+            // ul.appendChild(li);
+            // li.innerHTML = json.id;
         })
         .catch(function(error) {
             const currentText = body.innerHTML
